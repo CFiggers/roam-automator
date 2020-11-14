@@ -195,5 +195,8 @@ function run(input, parameters) {
     internalText = internalText.replace(findRE, "[[" + book + " $1]]");
   }
 
+  var findBrackets = new RegExp("(\\[\\[[\\w \\d]* \\d+\\]\\]:[\\d-–]+)", "g");
+  internalText = internalText.replace(findBrackets, "[[" + "$1" + "]]");
+
   return internalText;
 }
