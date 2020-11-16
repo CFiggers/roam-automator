@@ -1,5 +1,5 @@
 function run(input, parameters) {
-  let internalText = input;
+  let internalText = String(input);
 
   let abbrevs = {
     Gen: "Genesis",
